@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span th:text="${message}" style="color: darkcyan"></span>
+<form action="/action/edit" method="post" th:object="${editForm}">
+    <input type="hidden" name="id" th:field="*{id}">
+    <label>Name</label>
+    <input type="text" name="name" th:field="*{name}">
+    <label>Address</label>
+    <input type="text" name="address" th:field="*{address}">
+
+
+    <button type="submit">Edit</button>
+</form>
+<a href="/">Back</a>
+</body>
+</html>
